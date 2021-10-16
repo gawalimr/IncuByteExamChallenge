@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
 
-	StringCalculator stringCalculator = new StringCalculator();
+	StringCalculator stringCalculator=new StringCalculator();
 	
 	@Test
     void empty_string_should_return_0() {        
@@ -54,6 +54,9 @@ class StringCalculatorShould {
 	    public final void whenAnyNumberOfNumbers_IsUsed_ThenReturnValuesAreTheirSums() {
 	        assertEquals(3+6+15+18+46+33, stringCalculator.add("3,6,15,18,46,33"));
 	 }
-	
+	 @Test
+	 public final void whenDelimiterIsSpecifiedThenItIsUsedToSeparateNumbers() {
+	     assertEquals(3+6+15, stringCalculator.add("//;n3;6;15"));
+	 }
 	
 }
