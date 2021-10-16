@@ -26,6 +26,9 @@ class StringCalculator {
 		 findNegativeInputs(numbers);
 		 int sum=0;
 		 for (String num:numbers) {
+			 if(convertToInt(num)>1000) {
+				 continue;
+			 }
 			 sum+=convertToInt(num);
 		 }
 		 return sum;
