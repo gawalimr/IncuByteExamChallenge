@@ -6,16 +6,15 @@ import java.util.List;
 class StringCalculator {
 
 	private final String delimeter = ",|\n";
-	private static int cnt=1; 
-	
-	
-	
+	private static int cnt = 1;
+
 	public static int getCnt() {
 		return cnt;
 	}
+
 	public int add(String input) {
 		String[] numbers = input.split(delimeter);
-		
+
 		GetCalledCount();
 
 		if (input.isEmpty()) {
@@ -63,14 +62,6 @@ class StringCalculator {
 			sum += convertToInt(num);
 		}
 		return sum;
-	}
-
-	private void findNegativeInputs(String[] numbers) throws Exception {
-		for (String num : numbers) {
-			if (convertToInt(num) < 0) {
-				throw new Exception("negatives not allowed");
-			}
-		}
 	}
 
 	private int convertToInt(String input) {
