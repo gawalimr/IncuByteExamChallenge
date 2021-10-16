@@ -2,6 +2,8 @@ package calculator;
 
 import org.junit.jupiter.api.Test;
 
+import junit.framework.Assert;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -42,6 +44,12 @@ class StringCalculatorShould {
 	void ignore_NumbersGT1000_should_return_sum() {
 		assertEquals(2, stringCalculator.add("2,1001"));
 	}
+	
+	@Test
+	public final void whenNegativeNumbersAreUsedThenRuntimeExceptionIsThrown() {
+	    stringCalculator.add("3,-6,15,-18,46,33");
+	}
+	
 	
 	
 }
