@@ -38,5 +38,10 @@ class StringCalculatorShould {
 		stringCalculator.add("-1");
 	}
 	
+	@Test
+	void ignore_NumbersGT1000_should_return_sum() {
+		assertEquals(2, stringCalculator.add("2,1001"));
+	}
+	
 	
 }
