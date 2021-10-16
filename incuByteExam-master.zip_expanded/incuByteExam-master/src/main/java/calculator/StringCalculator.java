@@ -23,12 +23,7 @@ class StringCalculator {
 	 }
 	 
 	 private int getSum(String [] numbers) throws Exception {
-		 for (String num:numbers) {
-			 if(convertToInt(num)<0) {
-				 throw new Exception("negatives not allowed");
-			 }
-		 }
-		 
+		 findNegativeInputs(numbers);
 		 int sum=0;
 		 for (String num:numbers) {
 			 sum+=convertToInt(num);
@@ -36,7 +31,15 @@ class StringCalculator {
 		 return sum;
 	 }
 	 
-	 private int convertToInt(String input) {
+	 private void findNegativeInputs(String[] numbers) throws Exception {
+		 for (String num:numbers) {
+			 if(convertToInt(num)<0) {
+				 throw new Exception("negatives not allowed");
+			 }
+		 }
+	}
+
+	private int convertToInt(String input) {
 		 return Integer.parseInt(input);
 	 }
 		 
