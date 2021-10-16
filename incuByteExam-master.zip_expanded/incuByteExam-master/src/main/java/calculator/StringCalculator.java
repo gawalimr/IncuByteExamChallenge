@@ -24,6 +24,10 @@ class StringCalculator {
 	 
 	 private int getSum(String [] numbers) throws Exception {
 		 findNegativeInputs(numbers);
+		 return calculateValues(numbers);
+	 }
+	 
+	 private int calculateValues(String[] numbers) {
 		 int sum=0;
 		 for (String num:numbers) {
 			 if(convertToInt(num)>1000) {
@@ -32,9 +36,9 @@ class StringCalculator {
 			 sum+=convertToInt(num);
 		 }
 		 return sum;
-	 }
-	 
-	 private void findNegativeInputs(String[] numbers) throws Exception {
+	}
+
+	private void findNegativeInputs(String[] numbers) throws Exception {
 		 for (String num:numbers) {
 			 if(convertToInt(num)<0) {
 				 throw new Exception("negatives not allowed");
