@@ -49,7 +49,7 @@ class StringCalculatorShould {
 	public void Negative_NumbersAreUsed_ExceptionIsThrown() {
 		stringCalculator.add("3,-6,15,-18,46,33");
 	}
-
+	
 	@Test
 	public void whenAnyNumberOfNumbers_IsUsed_ThenReturnValuesAreTheirSums() {
 		assertEquals(3 + 6 + 15 + 18 + 46 + 33, stringCalculator.add("3,6,15,18,46,33"));
@@ -75,5 +75,9 @@ class StringCalculatorShould {
 		assertEquals(6, stringCalculator.add("//[**][%%]\\n1**2%%3"));
 	}
 	
+	@Test
+	public void countInvocationOfadd() {
+		System.out.println("add() invoked"+ StringCalculator.getCnt() + " times");
+	}
 
 }

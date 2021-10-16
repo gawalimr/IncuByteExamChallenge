@@ -6,9 +6,17 @@ import java.util.List;
 class StringCalculator {
 
 	private final String delimeter = ",|\n";
-
+	private static int cnt=1; 
+	
+	
+	
+	public static int getCnt() {
+		return cnt;
+	}
 	public int add(String input) {
 		String[] numbers = input.split(delimeter);
+		
+		GetCalledCount();
 
 		if (input.isEmpty()) {
 			return 0;
@@ -25,6 +33,10 @@ class StringCalculator {
 		}
 		return 0;
 
+	}
+
+	private int GetCalledCount() {
+		return cnt++;
 	}
 
 	private int getSum(String[] numbers) throws Exception {
