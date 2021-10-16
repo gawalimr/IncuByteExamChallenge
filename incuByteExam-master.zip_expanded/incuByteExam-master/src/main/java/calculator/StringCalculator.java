@@ -12,13 +12,17 @@ class StringCalculator {
 		 if(input.length()==1) {
 			 return convertToInt(input);
 		 }else {
-			 return getSum(numbers[0],numbers[1]);
+			 return getSum(numbers);
 		 }
 		
 	 }
 	 
-	 private int getSum(String n1,String n2) {
-		 return Integer.parseInt(n1)+Integer.parseInt(n2);
+	 private int getSum(String [] numbers) {
+		 int sum=0;
+		 for (int i = 0; i < numbers.length; i++) {
+			 sum+=Integer.parseInt(numbers[i]);
+		 }
+		 return sum;
 	 }
 	 
 	 private int convertToInt(String input) {
