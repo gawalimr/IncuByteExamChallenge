@@ -23,5 +23,9 @@ class StringCalculatorShould {
 	void twoNumbers_should_return_sum() {
 		assertEquals(3, stringCalculator.add("1,2"));
 	}
-    
+	
+	@Test
+	void twoNumbers_DelimetedNewLine_should_return_sum() {
+		assertEquals(3, stringCalculator.add("1\n2"));
+	}
 }
