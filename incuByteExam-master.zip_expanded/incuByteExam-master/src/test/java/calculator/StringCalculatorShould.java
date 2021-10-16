@@ -46,10 +46,14 @@ class StringCalculatorShould {
 	}
 	
 	@Test
-	public final void whenNegativeNumbersAreUsedThenRuntimeExceptionIsThrown() {
+	public final void Negative_NumbersAreUsed_ExceptionIsThrown() {
 	    stringCalculator.add("3,-6,15,-18,46,33");
 	}
 	
+	 @Test
+	    public final void whenAnyNumberOfNumbers_IsUsed_ThenReturnValuesAreTheirSums() {
+	        assertEquals(3+6+15+18+46+33, stringCalculator.add("3,6,15,18,46,33"));
+	 }
 	
 	
 }

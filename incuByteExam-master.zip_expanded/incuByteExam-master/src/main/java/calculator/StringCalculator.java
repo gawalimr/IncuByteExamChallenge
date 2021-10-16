@@ -27,9 +27,8 @@ class StringCalculator {
 
 	}
 
-
 	private int getSum(String[] numbers) throws Exception {
-		//findNegativeInputs(numbers);
+		// findNegativeInputs(numbers);
 		return calculateValues(numbers);
 	}
 
@@ -39,16 +38,16 @@ class StringCalculator {
 			if (convertToInt(num) > 1000) {
 				continue;
 			}
-			
-				List <Integer> negativeNumbers = new ArrayList<>();
-				for (String num1 : numbers) {
-					if(convertToInt(num1)<0) {
-						negativeNumbers.add(convertToInt(num1));
-					}
+
+			List<Integer> negativeNumbers = new ArrayList<>();
+			for (String num1 : numbers) {
+				if (convertToInt(num1) < 0) {
+					negativeNumbers.add(convertToInt(num1));
 				}
-				if (negativeNumbers.size() > 0) {
-			        throw new Exception("Negatives not allowed: " + negativeNumbers.toString());
-				}
+			}
+			if (negativeNumbers.size() > 0) {
+				throw new Exception("Negatives not allowed: " + negativeNumbers.toString());
+			}
 			sum += convertToInt(num);
 		}
 		return sum;
