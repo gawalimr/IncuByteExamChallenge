@@ -24,15 +24,14 @@ class StringCalculator {
 	 
 	 private int getSum(String [] numbers) throws Exception {
 		 for (String num:numbers) {
-			 
-			 if(Integer.parseInt(num)<0) {
+			 if(convertToInt(num)<0) {
 				 throw new Exception("negatives not allowed");
 			 }
 		 }
 		 
 		 int sum=0;
 		 for (String num:numbers) {
-			 sum+=Integer.parseInt(num);
+			 sum+=convertToInt(num);
 		 }
 		 return sum;
 	 }
