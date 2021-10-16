@@ -18,5 +18,10 @@ class StringCalculatorShould {
     void singleValue_should_return_1() {        
         assertEquals(1, stringCalculator.add("1"));
     }
+	
+	@Test
+	void twoNumbers_should_return_sum() {
+		assertEquals(3, stringCalculator.add("1,2"));
+	}
     
 }
