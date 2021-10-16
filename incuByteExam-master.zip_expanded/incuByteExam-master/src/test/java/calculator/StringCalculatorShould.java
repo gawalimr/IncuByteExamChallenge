@@ -33,4 +33,10 @@ class StringCalculatorShould {
 		assertEquals(6, stringCalculator.add("1\n2,3"));
 	}
 	
+	@Test
+	void negative_Number_Should_throw() {
+		stringCalculator.add("-1");
+	}
+	
+	
 }
