@@ -9,12 +9,14 @@ class StringCalculator {
 		 if(input.length()==1) {
 			 return convertToInt(input);
 		 }else {
-			 return Integer.parseInt(numbers[0])+Integer.parseInt(numbers[1]);
+			 return getSum(numbers[0],numbers[1]);
 		 }
 		
 	 }
 	 
-	 
+	 private int getSum(String n1,String n2) {
+		 return Integer.parseInt(n1)+Integer.parseInt(n2);
+	 }
 	 
 	 private int convertToInt(String input) {
 		 return Integer.parseInt(input);
