@@ -17,6 +17,8 @@ class StringCalculator {
 		String[] numbers = input.split(delimeter); // split String to String [] using delimiter 
 
 		GetCalledCount();     //add function called count
+		sixConsecutive(numbers);
+		
 
 		if (input.isEmpty()) {
 			return 0;
@@ -34,6 +36,18 @@ class StringCalculator {
 		}
 		return 0;
 	}// add function ends here
+
+	private void sixConsecutive(String[] numbers) {
+	
+		for (int i = 0; i < numbers.length; i++) {
+			if((convertToInt(numbers[i])==6) && (convertToInt(numbers[i+1])==6)) && (convertToInt(numbers[i+2])==6) {
+				
+			}
+			
+		}
+		
+		
+	}
 
 	private int GetCalledCount() {
 		return cnt++;
